@@ -1,0 +1,4 @@
+export const RECEIVE_FORECAST = 'RECEIVE_FORECAST';
+export const REQUEST_FORECAST = 'REQUEST_FORECAST';
+export const SHOW_LOADER = 'SHOW_LOADER';
+export const HIDE_LOADER = 'HIDE_LOADER';

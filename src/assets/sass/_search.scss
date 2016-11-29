@@ -1,0 +1,47 @@
+
+.search {
+	@include center;
+	max-width: 310px;
+	text-align: center;
+	width: 100%;
+	@media(max-width: 576px) {
+		max-width: 100%;
+		padding: 20px;
+	}
+	h2,h3 {
+		font-size: 1.67em;
+		padding-bottom: 25px;
+	}
+	form {
+		padding-bottom: 40px;	
+	}
+	
+}
+.geosuggest {
+	position: relative;
+	&__suggests-wrapper {
+		z-index: 100;
+		position: absolute;
+		text-align: left;
+		background: $purple;
+		width: 100%;
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+	}
+	&__suggests {
+		
+	}
+	&__item {
+		padding: 10px 15px;
+		border-bottom: 1px solid #777777;
+		cursor: pointer;
+		transition: background .2s linear;
+		&:hover {
+			background: $green;
+		}
+	}
+	&__suggests--hidden {
+		max-height: 0;
+		overflow: hidden;
+		border-width: 0;
+	}
+}

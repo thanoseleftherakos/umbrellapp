@@ -1,0 +1,61 @@
+.form-group {
+	position: relative;
+	&__error {
+		position: absolute;
+		display: block;
+		padding: 10px;
+		width: 100%;
+	}
+}
+.form-input{
+	border: none;
+	border-radius: 0;
+	outline: none;
+	font-family: $regular-font;
+	color: #fff;
+	padding: 0px 15px;
+	height: 54px;
+	font-size: 1.67em;
+	width: 100%;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+	transition: box-shadow 0.2s linear;
+	&:focus {
+		box-shadow: 0 3px 8px 0 rgba(0,0,0,0.5);
+	}
+	
+	&--purple {
+		background: $purple;
+	}
+	&--btn {
+		padding-right: 62px;
+	}
+}
+.form-btn {
+	outline: none;
+	border: none;
+	border-radius: 0;
+	transition: background 0.3s linear;
+	&--input {
+		position: absolute;
+		top: 7px;
+		right: 11px;
+		height: 40px;	 
+		width: 40px;
+		line-height: 40px;
+		background: #fff;
+		text-align: center;
+		padding: 0;
+		i{
+			font-size: 25px;
+			line-height: 45px;
+		}
+	}
+	&--purple {
+		i {
+			color: $purple;
+		}
+		&:hover {
+			background: $green;
+		}
+	}
+}

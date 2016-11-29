@@ -1,0 +1,70 @@
+@import "reset";
+@import "mixins";
+@import "fonts";
+@import "icons";
+@import "globals";
+@import "header";
+@import "forms";
+@import "search";
+@import "loader";
+@import "weather";
+
+body, html {
+	font-size: 15px;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-family: $regular-font;
+	-webkit-font-smoothing: antialiased;
+}
+body{
+	&.nav-open {
+		overflow:hidden;
+	}
+}
+a {
+	transition: color 0.2s linear;	
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	@media (max-height:470px){
+		min-height: 500px;
+	}
+	&--red {
+		background-color: $red;
+	}
+	&--purple {
+		background-color: $purple;
+	}
+}
+
+
+.btn {
+	outline: none;
+	border: none;
+	margin:0;
+	font-size: 1.67em;
+	font-family: $regular-font;
+	height: 54px;
+	padding:0 25px 4px;
+	transition-property: background-color, color;
+	transition-duration: .2s;
+	&--icon {
+		i {
+			position: relative;
+			top: 6px;
+			padding-right: 15px;
+		}
+	}
+	&--green {
+		background-color: $green;
+		color: $purple;
+		&:hover {
+			background-color: $purple;
+			color: $green;
+		}
+	}
+}
