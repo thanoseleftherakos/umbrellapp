@@ -21,6 +21,16 @@ export default class Header extends Component {
 		const top = (screen.height/2)-(h/2);
 		return window.open(url, '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
 	}
+	showFavorites = () => {
+		console.log(this.props.location);
+		if(this.props.location == "/forecast") {
+			return (
+				<div className="header__fav">
+					<a href="#"><span>Add to Favorites</span><i className="icon-heart"></i></a>
+				</div>
+			)
+		}
+	}
 	render() {
 		return (
 			<header className="header">
@@ -28,10 +38,7 @@ export default class Header extends Component {
 				<div className="header__logo">
 					<Link to="/"><img src={logo} alt=""/></Link>
 				</div>
-				<div className="header__fav">
-					<a href="#"><span>Add to Favorites</span><i className="icon-heart"></i></a>
-				</div>
-
+				{ this.showFavorites() }
 				<nav className={"nav " + (this.state.navOpen ? "active" :"")}>
 					<h1>Your best weather app</h1>
 					<hr />

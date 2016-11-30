@@ -14,7 +14,7 @@ class App extends Component {
     }
     return (
       <div>
-      	<Header />
+      	<Header location={this.props.location.pathname} />
           {this.props.children}
       </div>
     );
