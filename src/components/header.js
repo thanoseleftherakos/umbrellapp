@@ -22,7 +22,6 @@ export default class Header extends Component {
 		return window.open(url, '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
 	}
 	showFavorites = () => {
-		console.log(this.props.location);
 		if(this.props.location == "/forecast") {
 			return (
 				<div className="header__fav">
